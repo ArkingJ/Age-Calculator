@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/luxon@3.4.4/build/global/luxon.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator-card">
+            <h1>Age Calculator</h1>
+            <p class="subtitle">Calculate your exact age in years, months, and days</p>
+            
+            <form id="age-form">
+                <div class="form-group">
+                    <label for="birthdate">Enter your birth date:</label>
+                    <div class="date-input-container">
+                        <input type="text" id="birthdate" placeholder="Click to select date" readonly required>
+                        <div class="datepicker" id="datepicker">
+                            <div class="datepicker-header">
+                                <button type="button" class="nav-btn" id="prev-month">&lt;</button>
+                                <div class="current-month-year">
+                                    <span id="current-month">January</span>
+                                    <span id="current-year" class="year-selector">2024</span>
+                                    <div class="year-dropdown" id="year-dropdown">
+                                        <div class="year-dropdown-content">
+                                            <!-- Years will be populated by JavaScript -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="nav-btn" id="next-month">&gt;</button>
+                            </div>
+                            
+                            <div class="weekdays">
+                                <div class="weekday">Sun</div>
+                                <div class="weekday">Mon</div>
+                                <div class="weekday">Tue</div>
+                                <div class="weekday">Wed</div>
+                                <div class="weekday">Thu</div>
+                                <div class="weekday">Fri</div>
+                                <div class="weekday">Sat</div>
+                            </div>
+                            
+                            <div class="calendar-days" id="calendar-days">
+                                <!-- Days will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="calculate-btn">Calculate Age</button>
+            </form>
+            
+            <div id="result" class="result-container" style="display: none;">
+                <h2>Your Age</h2>
+                <div class="age-display">
+                    <div class="age-unit">
+                        <span class="age-number" id="years">0</span>
+                        <span class="age-label">Years</span>
+                    </div>
+                    <div class="age-unit">
+                        <span class="age-number" id="months">0</span>
+                        <span class="age-label">Months</span>
+                    </div>
+                    <div class="age-unit">
+                        <span class="age-number" id="days">0</span>
+                        <span class="age-label">Days</span>
+                    </div>
+                </div>
+                <p class="birthday-info" id="birthday-info"></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
