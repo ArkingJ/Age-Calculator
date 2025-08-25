@@ -2,6 +2,10 @@
 
 A modern, responsive age calculator web application that calculates exact age in years, months, and days using the Luxon library.
 
+## Live Demo
+
+- Project page: [https://arkingj.github.io/Age-Calculator/](https://arkingj.github.io/Age-Calculator/)
+
 ## Features
 
 - **Custom Datepicker**: Beautiful, interactive date picker (no default HTML date input)
